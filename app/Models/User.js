@@ -34,6 +34,11 @@ class User extends Model {
   tokens () {
     return this.hasMany('App/Models/Token')
   }
+
+  proyectos(){
+    return this.hasMany('App/Models/Proyecto') // hasMany determina la relacion de que un usuario puede tener muchos proyectos
+  }
 }
+
 
 module.exports = User
