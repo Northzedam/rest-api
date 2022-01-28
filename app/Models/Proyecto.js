@@ -9,6 +9,10 @@ class Proyecto extends Model {
         return this.belongsTo('App/Models/User') // belongsTo indica la relacion de que un Proyecto pertenece a un usuario
     }
 
+    tareas(){
+        return this.hasMany('App/Models/Tarea') // un proyecto tiene muchas tareas
+    }
+
 }
 
 module.exports = Proyecto
